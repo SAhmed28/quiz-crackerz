@@ -1,0 +1,21 @@
+.header-info{
+    width: 80%;
+    background: #fefefe;
+    padding-top: 3rem;
+    padding-left: 2rem;
+    position: relative;
+}
+.header-img img{
+    width: 100%;
+}
+.header-info h1::before {
+    content: "";
+    position: absolute;
+    top: 24%;
+    width: 100%;
+    left: 5%;
+    height: 5px;
+    border-radius: 2px;
+    background: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
+  }
+  

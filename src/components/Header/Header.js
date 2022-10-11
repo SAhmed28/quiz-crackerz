@@ -1,9 +1,13 @@
 import React from 'react';
+import {useLoaderData} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLightbulb, faPaperPlane, faRuler, faCertificate } from '@fortawesome/free-solid-svg-icons'
 import './Header.css'
 
 const Header = () => {
+    const data = useLoaderData();
+    const topics = data.data
+    console.log(topics)
     return (
         <div className='mx-8 flex flex-col md:flex-row'>
             <div className="header-info">

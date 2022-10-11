@@ -1,0 +1,8 @@
+.topic img{
+    padding: 10px;
+    background: #000;
+}
+.topic{
+    border: 2px solid skyblue;
+    border-radius: 10px;
+}

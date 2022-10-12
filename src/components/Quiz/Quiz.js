@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Quiz.css'
 
 const Quiz = ({quiz}) => {
@@ -10,10 +12,17 @@ const Quiz = ({quiz}) => {
     const handleCorrectAnsCount = (id, option) => {
         
         if(quiz.id === id && quiz.correctAnswer === option){
+            toast.success('Answer is correct! Great Job!', {
+                position: toast.POSITION.TOP_RIGHT
+            });
+            
             setCorrect(correct+1);
             console.log(correct);
         }
         else{
+            toast.error('Wrong Answer! Please try again!', {
+                position: toast.POSITION.TOP_RIGHT
+            });
             setWrong(wrong+1);
             console.log('wrong: ',wrong);
         }
@@ -28,7 +37,7 @@ const Quiz = ({quiz}) => {
                 {
                     options.map(option => 
                         <label for={option} className='py-3 px-4 text-xl border-solid border-2 mb-3 '>
-                            <input onClick={()=>handleCorrectAnsCount(id, option)} type="radio" id={option} name={id} value={option}/>
+                            <input onClick={()=>handleCorrectAnsCount(id, option)} type="radio" id={option} name={id} value={option}/> <ToastContainer />
                                 <span className='pl-3'>{option}</span>
                         </label>
                     )

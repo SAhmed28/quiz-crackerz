@@ -39,6 +39,8 @@ function App() {
           element: <Quizes></Quizes>
         },
 
+        {path: '*', element: <div><h2>404 Link not Found!</h2></div>},
+
       ]
     }
   ])

@@ -4,17 +4,19 @@ import Quiz from '../Quiz/Quiz';
 
 const Quizes = () => {
     const quizes = useLoaderData();
-    const {questions} = quizes.data;
-    console.log(questions);
+    const {questions, name} = quizes.data;
+    console.log(name);
     
     return (
-        <div className='m-8'>
+        <form className='bg-gradient-to-r from-green-400 to-blue-500 py-4'>
+            <h2 className='text-center py-4 text-3xl font-bold text-white'>Quiz of {name}</h2>
             {
                 questions.map(quiz=> <Quiz 
                     key={quiz.id}
-                    quiz = {quiz}></Quiz>)
+                    quiz = {quiz}
+                    ></Quiz>)
             }
-        </div>
+        </form>
     );
 };
 

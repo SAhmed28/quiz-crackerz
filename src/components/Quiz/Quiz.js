@@ -49,23 +49,30 @@ const Quiz = ({quiz}) => {
     
     
     return (
-        <div className='quiz w-3/4 md:w-1/2 mx-auto p-5 border-solid border-4 border-purple-600 mb-8 rounded-lg bg-white'>
-            <div className="question-part flex justify-between">
-                <h2 className='text-xl md:text-2xl font-bold text-center pb-8'>Question: {question.slice (3, -4)}</h2>
-                <FontAwesomeIcon onClick={() => handleEye(id)} className='text-2xl text-purple-500 cursor-pointer px-2 py-2' icon={faEye} /> <ToastContainer />
-            </div>
-            <div className="flex flex-col font-semibold">
-                {
-                    options.map(option => 
-                        <label for={option} className='py-3 px-4 text-xl border-solid border-2 mb-3 flex'>
-                            <input onClick={()=>handleCorrectAnsCount(id, option)} type="radio" id={option} name={id} value={option}/> <ToastContainer />
-                                <span className='pl-3'>{option}</span>
-                        </label>
-                    )
+        <div className="flex">
+            <div className='quiz mx-2 md:w-3/4 md:mx-16 p-5 border-solid border-4 border-purple-600 mb-8 rounded-lg bg-white'>
+                <div className="question-part flex justify-between">
+                    <h2 className='text-xl md:text-2xl font-bold text-center pb-8'>Question: {question.slice (3, -4)}</h2>
+                    <FontAwesomeIcon onClick={() => handleEye(id)} className='text-2xl text-purple-500 cursor-pointer px-2 py-2' icon={faEye} /> <ToastContainer />
+                </div>
+                <div className="flex flex-col font-semibold">
+                    {
+                        options.map(option => 
+                            <label for={option} className='py-3 px-4 text-xl border-solid border-2 mb-3 flex'>
+                                <input onClick={()=>handleCorrectAnsCount(id, option)} type="radio" id={option} name={id} value={option}/> <ToastContainer />
+                                    <span className='pl-3'>{option}</span>
+                            </label>
+                        )
 
-                }
-                
+                    }
+                    
+                </div>
             </div>
+
+            {/* <div className="score">
+                <h3>Correct: {correct}</h3>
+                <h3>Wrong: {wrong}</h3>
+            </div> */}
         </div>
     );
 };

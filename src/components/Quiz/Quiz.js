@@ -52,7 +52,7 @@ const Quiz = ({quiz}) => {
         <div className='quiz w-3/4 md:w-1/2 mx-auto p-5 border-solid border-4 border-purple-600 mb-8 rounded-lg bg-white'>
             <div className="question-part flex">
                 <h2 className='text-xl md:text-2xl font-bold text-center pb-8'>Question: {question.slice (3, -4)}</h2>
-                <FontAwesomeIcon onClick={() => handleEye(id)} className='text-2xl text-purple-500' icon={faEye} /> <ToastContainer />
+                <FontAwesomeIcon onClick={() => handleEye(id)} className='text-2xl text-purple-500 cursor-pointer px-2 py-2' icon={faEye} /> <ToastContainer />
             </div>
             <div className="flex flex-col font-semibold">
                 {

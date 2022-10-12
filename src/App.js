@@ -38,11 +38,10 @@ function App() {
           },
           element: <Quizes></Quizes>
         },
-
-        {path: '*', element: <div><h2>404 Link not Found!</h2></div>},
-
       ]
-    }
+    },
+
+    {path: '*', element: <div><h2 className='text-center font-bold text-4xl'>404 Link not Found!</h2></div>},
   ])
   return (
     <div className="App">

@@ -8,8 +8,8 @@ const Quizes = () => {
     console.log(name);
     
     return (
-        <form className='bg-gradient-to-r from-green-400 to-blue-500 py-4'>
-            <h2 className='text-center py-4 text-3xl font-bold text-white'>Quiz of {name}</h2>
+        <form className='bg-gradient-to-r from-green-200 to-blue-300 py-4'>
+            <h2 className='text-center py-4 text-3xl font-bold'>Quiz of {name}</h2>
             {
                 questions.map(quiz=> <Quiz 
                     key={quiz.id}

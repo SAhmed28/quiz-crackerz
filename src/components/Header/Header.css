@@ -19,3 +19,18 @@
     background: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
   }
   
+
+@media only screen and (max-width:688px) {
+    .header-info h1::before {
+        top: 31%;
+        width: 50%;
+        left: 12%;
+        height: 3px;
+        border-radius: 2px;
+        background: linear-gradient(111.3deg, #9c27b0 9.6%, #00bcd4 93.6%);
+      }
+      .header-img img{
+        padding-top: 2rem;
+    }
+      
+}
